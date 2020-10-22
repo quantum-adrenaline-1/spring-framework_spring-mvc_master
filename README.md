@@ -10,3 +10,10 @@ The technologies used are -
 The sequence of projects developed are as follows -
 1. HelloWorld
 
+
+* All the projects are developed as two variants in the respective folders-
+1. Maven build
+2. Gradle build
+
+
+* For the initials, the project configuration is implemented using XML. Soon, the project configurations would be done using Java.
