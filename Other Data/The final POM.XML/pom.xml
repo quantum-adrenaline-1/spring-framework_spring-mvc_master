@@ -1,0 +1,1173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>com.springmvc.webflow</groupId>
+  <artifactId>HelloWorldWithMessage</artifactId>
+  <version>1.0.0</version>
+  <packaging>war</packaging>
+
+  <name>HelloWorldWithMessage Maven Spring MVC Webapp</name>
+  <!-- FIXME change it to the project's website -->
+  <!-- <url>http://www.example.com</url> -->
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <maven.compiler.source>1.8</maven.compiler.source>
+    <maven.compiler.target>1.8</maven.compiler.target>
+    
+    <springframework.version></springframework.version>
+  </properties>
+
+  <dependencies>
+  
+  	<!-- https://mvnrepository.com/artifact/org.springframework/spring-core -->
+	<dependency>
+	    <groupId>org.springframework</groupId>
+	    <artifactId>spring-core</artifactId>
+	    <version>5.2.9.RELEASE</version>
+	</dependency>
+	  	
+	<!-- https://mvnrepository.com/artifact/org.springframework/spring-web -->
+	<dependency>
+	    <groupId>org.springframework</groupId>
+	    <artifactId>spring-web</artifactId>
+	    <version>5.2.9.RELEASE</version>
+	</dependency>
+	
+	<!-- https://mvnrepository.com/artifact/org.springframework/spring-webmvc -->
+	<dependency>
+	    <groupId>org.springframework</groupId>
+	    <artifactId>spring-webmvc</artifactId>
+	    <version>5.2.9.RELEASE</version>
+	</dependency>
+		
+	<!-- https://mvnrepository.com/artifact/org.springframework/spring-aop -->
+	<dependency>
+	    <groupId>org.springframework</groupId>
+	    <artifactId>spring-aop</artifactId>
+	    <version>5.2.9.RELEASE</version>
+	</dependency>
+		
+	<!-- https://mvnrepository.com/artifact/org.springframework/spring-orm -->
+	<dependency>
+	    <groupId>org.springframework</groupId>
+	    <artifactId>spring-orm</artifactId>
+	    <version>5.2.9.RELEASE</version>
+	</dependency>
+		
+	<!-- https://mvnrepository.com/artifact/org.springframework/spring-jdbc -->
+	<dependency>
+	    <groupId>org.springframework</groupId>
+	    <artifactId>spring-jdbc</artifactId>
+	    <version>5.2.9.RELEASE</version>
+	</dependency>
+		
+	<!-- https://mvnrepository.com/artifact/org.springframework/spring-tx -->
+	<dependency>
+	    <groupId>org.springframework</groupId>
+	    <artifactId>spring-tx</artifactId>
+	    <version>5.2.9.RELEASE</version>
+	</dependency>
+		
+	<!-- https://mvnrepository.com/artifact/org.springframework/spring-context -->
+	<dependency>
+	    <groupId>org.springframework</groupId>
+	    <artifactId>spring-context</artifactId>
+	    <version>5.2.9.RELEASE</version>
+	</dependency>
+		
+	<!-- https://mvnrepository.com/artifact/org.springframework/spring-context-support -->
+	<dependency>
+	    <groupId>org.springframework</groupId>
+	    <artifactId>spring-context-support</artifactId>
+	    <version>5.2.9.RELEASE</version>
+	</dependency>
+		
+	<!-- https://mvnrepository.com/artifact/org.springframework/spring-beans -->
+	<dependency>
+	    <groupId>org.springframework</groupId>
+	    <artifactId>spring-beans</artifactId>
+	    <version>5.2.9.RELEASE</version>
+	</dependency>
+		
+	<!-- https://mvnrepository.com/artifact/org.springframework/spring-expression -->
+	<dependency>
+	    <groupId>org.springframework</groupId>
+	    <artifactId>spring-expression</artifactId>
+	    <version>5.2.9.RELEASE</version>
+	</dependency>
+		
+	<!-- https://mvnrepository.com/artifact/org.springframework/spring-jms -->
+	<dependency>
+	    <groupId>org.springframework</groupId>
+	    <artifactId>spring-jms</artifactId>
+	    <version>5.2.9.RELEASE</version>
+	</dependency>
+		
+	<!-- https://mvnrepository.com/artifact/org.springframework/spring-messaging -->
+	<dependency>
+	    <groupId>org.springframework</groupId>
+	    <artifactId>spring-messaging</artifactId>
+	    <version>5.2.9.RELEASE</version>
+	</dependency>
+		
+	<!-- https://mvnrepository.com/artifact/org.springframework/spring-aspects -->
+	<dependency>
+	    <groupId>org.springframework</groupId>
+	    <artifactId>spring-aspects</artifactId>
+	    <version>5.2.9.RELEASE</version>
+	</dependency>
+		
+	<!-- https://mvnrepository.com/artifact/org.springframework/spring-oxm -->
+	<dependency>
+	    <groupId>org.springframework</groupId>
+	    <artifactId>spring-oxm</artifactId>
+	    <version>5.2.9.RELEASE</version>
+	</dependency>
+		
+	<!-- https://mvnrepository.com/artifact/org.springframework.data/spring-data-jpa -->
+	<dependency>
+	    <groupId>org.springframework.data</groupId>
+	    <artifactId>spring-data-jpa</artifactId>
+	    <version>2.3.4.RELEASE</version>
+	</dependency>
+		
+	<!-- https://mvnrepository.com/artifact/org.springframework.security/spring-security-core -->
+	<dependency>
+	    <groupId>org.springframework.security</groupId>
+	    <artifactId>spring-security-core</artifactId>
+	    <version>5.4.0</version>
+	</dependency>
+	
+	<!-- https://mvnrepository.com/artifact/org.springframework.security/spring-security-web -->
+	<dependency>
+	    <groupId>org.springframework.security</groupId>
+	    <artifactId>spring-security-web</artifactId>
+	    <version>5.4.0</version>
+	</dependency>
+		
+	<!-- https://mvnrepository.com/artifact/org.springframework.security/spring-security-config -->
+	<dependency>
+	    <groupId>org.springframework.security</groupId>
+	    <artifactId>spring-security-config</artifactId>
+	    <version>5.4.0</version>
+	</dependency>
+		
+  	<!-- https://mvnrepository.com/artifact/org.springframework.security/spring-security-crypto -->
+	<dependency>
+	    <groupId>org.springframework.security</groupId>
+	    <artifactId>spring-security-crypto</artifactId>
+	    <version>5.4.0</version>
+	</dependency>
+	  	
+	<!-- https://mvnrepository.com/artifact/org.springframework.security/spring-security-test -->
+	<dependency>
+	    <groupId>org.springframework.security</groupId>
+	    <artifactId>spring-security-test</artifactId>
+	    <version>5.4.0</version>
+	    <scope>test</scope>
+	</dependency>
+		
+	<!-- https://mvnrepository.com/artifact/org.springframework.security/spring-security-cas -->
+	<dependency>
+	    <groupId>org.springframework.security</groupId>
+	    <artifactId>spring-security-cas</artifactId>
+	    <version>5.4.0</version>
+	</dependency>
+		
+	<!-- https://mvnrepository.com/artifact/org.springframework.security.oauth/spring-security-oauth2 -->
+	<dependency>
+	    <groupId>org.springframework.security.oauth</groupId>
+	    <artifactId>spring-security-oauth2</artifactId>
+	    <version>2.5.0.RELEASE</version>
+	</dependency>
+		
+	<!-- https://mvnrepository.com/artifact/org.springframework.security/spring-security-ldap -->
+	<dependency>
+	    <groupId>org.springframework.security</groupId>
+	    <artifactId>spring-security-ldap</artifactId>
+	    <version>5.4.0</version>
+	</dependency>
+		
+	<!-- https://mvnrepository.com/artifact/org.springframework.security/spring-security-jwt -->
+	<dependency>
+	    <groupId>org.springframework.security</groupId>
+	    <artifactId>spring-security-jwt</artifactId>
+	    <version>1.1.1.RELEASE</version>
+	</dependency>
+			
+	<!-- https://mvnrepository.com/artifact/org.springframework.security/spring-security-oauth2-jose -->
+	<dependency>
+	    <groupId>org.springframework.security</groupId>
+	    <artifactId>spring-security-oauth2-jose</artifactId>
+	    <version>5.4.0</version>
+	</dependency>
+		
+	<!-- https://mvnrepository.com/artifact/org.springframework.security/spring-security-oauth2-client -->
+	<dependency>
+	    <groupId>org.springframework.security</groupId>
+	    <artifactId>spring-security-oauth2-client</artifactId>
+	    <version>5.4.0</version>
+	</dependency>
+		
+	<!-- https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-config-client -->
+	<dependency>
+	    <groupId>org.springframework.cloud</groupId>
+	    <artifactId>spring-cloud-config-client</artifactId>
+	    <version>2.2.5.RELEASE</version>
+	</dependency>
+		
+	<!-- https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-config-server -->
+	<dependency>
+	    <groupId>org.springframework.cloud</groupId>
+	    <artifactId>spring-cloud-config-server</artifactId>
+	    <version>2.2.5.RELEASE</version>
+	</dependency>
+	
+	<!-- https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-context -->
+	<dependency>
+	    <groupId>org.springframework.cloud</groupId>
+	    <artifactId>spring-cloud-context</artifactId>
+	    <version>2.2.5.RELEASE</version>
+	</dependency>
+		
+	<!-- https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-commons -->
+	<dependency>
+	    <groupId>org.springframework.cloud</groupId>
+	    <artifactId>spring-cloud-commons</artifactId>
+	    <version>2.2.5.RELEASE</version>
+	</dependency>
+		
+	<!-- https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-starter-config -->
+	<dependency>
+	    <groupId>org.springframework.cloud</groupId>
+	    <artifactId>spring-cloud-starter-config</artifactId>
+	    <version>2.2.5.RELEASE</version>
+	</dependency>
+		
+	<!-- https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-starter-openfeign -->
+	<dependency>
+	    <groupId>org.springframework.cloud</groupId>
+	    <artifactId>spring-cloud-starter-openfeign</artifactId>
+	    <version>2.2.5.RELEASE</version>
+	</dependency>
+		
+	<!-- https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-bus -->
+	<dependency>
+	    <groupId>org.springframework.cloud</groupId>
+	    <artifactId>spring-cloud-bus</artifactId>
+	    <version>2.2.3.RELEASE</version>
+	</dependency>
+		
+	<!-- https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-stream -->
+	<dependency>
+	    <groupId>org.springframework.cloud</groupId>
+	    <artifactId>spring-cloud-stream</artifactId>
+	    <version>3.0.8.RELEASE</version>
+	</dependency>
+		
+	<!-- https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-starter-stream-kafka -->
+	<dependency>
+	    <groupId>org.springframework.cloud</groupId>
+	    <artifactId>spring-cloud-starter-stream-kafka</artifactId>
+	    <version>3.0.7.RELEASE</version>
+	</dependency>
+		
+	<!-- https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-starter -->
+	<dependency>
+	    <groupId>org.springframework.cloud</groupId>
+	    <artifactId>spring-cloud-starter</artifactId>
+	    <version>2.2.5.RELEASE</version>
+	</dependency>
+		
+	<!-- https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-starter-netflix-eureka-client -->
+	<dependency>
+	    <groupId>org.springframework.cloud</groupId>
+	    <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+	    <version>2.2.5.RELEASE</version>
+	</dependency>
+		
+	<!-- https://mvnrepository.com/artifact/org.springframework.data/spring-data-commons -->
+	<dependency>
+	    <groupId>org.springframework.data</groupId>
+	    <artifactId>spring-data-commons</artifactId>
+	    <version>2.3.4.RELEASE</version>
+	</dependency>
+		
+	<!-- https://mvnrepository.com/artifact/org.springframework.data/spring-data-mongodb -->
+	<dependency>
+	    <groupId>org.springframework.data</groupId>
+	    <artifactId>spring-data-mongodb</artifactId>
+	    <version>3.0.4.RELEASE</version>
+	</dependency>
+		
+	<!-- https://mvnrepository.com/artifact/org.springframework.data/spring-data-redis -->
+	<dependency>
+	    <groupId>org.springframework.data</groupId>
+	    <artifactId>spring-data-redis</artifactId>
+	    <version>2.3.4.RELEASE</version>
+	</dependency>
+		
+	<!-- https://mvnrepository.com/artifact/org.springframework.data/spring-data-rest-webmvc -->
+	<dependency>
+	    <groupId>org.springframework.data</groupId>
+	    <artifactId>spring-data-rest-webmvc</artifactId>
+	    <version>3.3.4.RELEASE</version>
+	</dependency>
+		
+	<!-- https://mvnrepository.com/artifact/org.springframework.data/spring-data-elasticsearch -->
+	<dependency>
+	    <groupId>org.springframework.data</groupId>
+	    <artifactId>spring-data-elasticsearch</artifactId>
+	    <version>4.0.4.RELEASE</version>
+	</dependency>
+		
+	<!-- https://mvnrepository.com/artifact/org.springframework.data/spring-data-rest-core -->
+	<dependency>
+	    <groupId>org.springframework.data</groupId>
+	    <artifactId>spring-data-rest-core</artifactId>
+	    <version>3.3.4.RELEASE</version>
+	</dependency>
+		
+	<!-- https://mvnrepository.com/artifact/org.springframework.data/spring-data-neo4j -->
+	<dependency>
+	    <groupId>org.springframework.data</groupId>
+	    <artifactId>spring-data-neo4j</artifactId>
+	    <version>5.3.4.RELEASE</version>
+	</dependency>
+		
+	<!-- https://mvnrepository.com/artifact/org.springframework.session/spring-session-data-redis -->
+	<dependency>
+	    <groupId>org.springframework.session</groupId>
+	    <artifactId>spring-session-data-redis</artifactId>
+	    <version>2.3.0.RELEASE</version>
+	</dependency>
+		
+	<!-- https://mvnrepository.com/artifact/org.springframework.data/spring-data-jdbc -->
+	<dependency>
+	    <groupId>org.springframework.data</groupId>
+	    <artifactId>spring-data-jdbc</artifactId>
+	    <version>2.0.3.RELEASE</version>
+	</dependency>
+		
+	<!-- https://mvnrepository.com/artifact/org.springframework.data/spring-data-ldap -->
+	<dependency>
+	    <groupId>org.springframework.data</groupId>
+	    <artifactId>spring-data-ldap</artifactId>
+	    <version>2.3.4.RELEASE</version>
+	</dependency>
+		
+	<!-- https://mvnrepository.com/artifact/org.springframework.data/spring-data-relational -->
+	<dependency>
+	    <groupId>org.springframework.data</groupId>
+	    <artifactId>spring-data-relational</artifactId>
+	    <version>2.0.3.RELEASE</version>
+	</dependency>
+		
+	<!-- https://mvnrepository.com/artifact/org.springframework.security/spring-security-data -->
+	<dependency>
+	    <groupId>org.springframework.security</groupId>
+	    <artifactId>spring-security-data</artifactId>
+	    <version>5.2.6.RELEASE</version>
+	</dependency>
+		
+	<!-- https://mvnrepository.com/artifact/org.springframework/spring-test -->
+	<dependency>
+	    <groupId>org.springframework</groupId>
+	    <artifactId>spring-test</artifactId>
+	    <version>5.2.9.RELEASE</version>
+	    <scope>test</scope>
+	</dependency>
+	
+	<!-- https://mvnrepository.com/artifact/org.hibernate.orm/hibernate-jpamodelgen -->
+	<dependency>
+	    <groupId>org.hibernate.orm</groupId>
+	    <artifactId>hibernate-jpamodelgen</artifactId>
+	    <version>6.0.0.Alpha6</version>
+	</dependency>
+	
+	<!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-tools -->
+	<dependency>
+	    <groupId>org.hibernate</groupId>
+	    <artifactId>hibernate-tools</artifactId>
+	    <version>5.4.22.Final</version>
+	</dependency>
+		
+	<!-- https://mvnrepository.com/artifact/org.hibernate.orm/hibernate-testing -->
+	<dependency>
+	    <groupId>org.hibernate.orm</groupId>
+	    <artifactId>hibernate-testing</artifactId>
+	    <version>6.0.0.Alpha6</version>
+	</dependency>
+		
+	<!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-spatial -->
+	<dependency>
+	    <groupId>org.hibernate</groupId>
+	    <artifactId>hibernate-spatial</artifactId>
+	    <version>5.4.21.Final</version>
+	</dependency>
+		
+	<!-- https://mvnrepository.com/artifact/org.hibernate.orm/hibernate-jcache -->
+	<dependency>
+	    <groupId>org.hibernate.orm</groupId>
+	    <artifactId>hibernate-jcache</artifactId>
+	    <version>6.0.0.Alpha6</version>
+	</dependency>
+		
+	<!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-search-engine -->
+	<dependency>
+	    <groupId>org.hibernate</groupId>
+	    <artifactId>hibernate-search-engine</artifactId>
+	    <version>5.11.5.Final</version>
+	</dependency>
+		
+	<!-- https://mvnrepository.com/artifact/org.hibernate.orm/hibernate-java8 -->
+	<dependency>
+	    <groupId>org.hibernate.orm</groupId>
+	    <artifactId>hibernate-java8</artifactId>
+	    <version>6.0.0.Alpha6</version>
+	</dependency>
+		
+	<!-- https://mvnrepository.com/artifact/org.hibernate.orm/hibernate-core -->
+	<dependency>
+	    <groupId>org.hibernate.orm</groupId>
+	    <artifactId>hibernate-core</artifactId>
+	    <version>6.0.0.Alpha6</version>
+	</dependency>
+		
+	<!-- https://mvnrepository.com/artifact/org.hibernate.validator/hibernate-validator -->
+	<dependency>
+	    <groupId>org.hibernate.validator</groupId>
+	    <artifactId>hibernate-validator</artifactId>
+	    <version>6.1.6.Final</version>
+	</dependency>
+		
+	<!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-annotations -->
+	<dependency>
+	    <groupId>org.hibernate</groupId>
+	    <artifactId>hibernate-annotations</artifactId>
+	    <version>3.5.6-Final</version>
+	</dependency>
+		
+	<!-- https://mvnrepository.com/artifact/org.hibernate.javax.persistence/hibernate-jpa-2.1-api -->
+	<dependency>
+	    <groupId>org.hibernate.javax.persistence</groupId>
+	    <artifactId>hibernate-jpa-2.1-api</artifactId>
+	    <version>1.0.2.Final</version>
+	</dependency>
+		
+	<!-- https://mvnrepository.com/artifact/org.hibernate.orm/hibernate-hikaricp -->
+	<dependency>
+	    <groupId>org.hibernate.orm</groupId>
+	    <artifactId>hibernate-hikaricp</artifactId>
+	    <version>6.0.0.Alpha6</version>
+	</dependency>
+		
+	<!-- https://mvnrepository.com/artifact/org.hibernate.orm/hibernate-ehcache -->
+	<dependency>
+	    <groupId>org.hibernate.orm</groupId>
+	    <artifactId>hibernate-ehcache</artifactId>
+	    <version>6.0.0.Alpha6</version>
+	</dependency>
+		
+	<!-- https://mvnrepository.com/artifact/org.hibernate.common/hibernate-commons-annotations -->
+	<dependency>
+	    <groupId>org.hibernate.common</groupId>
+	    <artifactId>hibernate-commons-annotations</artifactId>
+	    <version>5.1.0.Final</version>
+	</dependency>
+		
+	<!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-search-orm -->
+	<dependency>
+	    <groupId>org.hibernate</groupId>
+	    <artifactId>hibernate-search-orm</artifactId>
+	    <version>5.11.5.Final</version>
+	</dependency>
+	
+	<!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
+	<dependency>
+	    <groupId>mysql</groupId>
+	    <artifactId>mysql-connector-java</artifactId>
+	    <version>8.0.21</version>
+	</dependency>
+		
+	<!-- https://mvnrepository.com/artifact/org.mongodb/mongodb-driver-async -->
+	<dependency>
+	    <groupId>org.mongodb</groupId>
+	    <artifactId>mongodb-driver-async</artifactId>
+	    <version>3.12.7</version>
+	</dependency>
+		
+	<!-- https://mvnrepository.com/artifact/org.mongodb/mongo-java-driver -->
+	<dependency>
+	    <groupId>org.mongodb</groupId>
+	    <artifactId>mongo-java-driver</artifactId>
+	    <version>3.12.7</version>
+	</dependency>
+		
+	<!-- https://mvnrepository.com/artifact/org.mongodb/mongodb-driver-sync -->
+	<dependency>
+	    <groupId>org.mongodb</groupId>
+	    <artifactId>mongodb-driver-sync</artifactId>
+	    <version>4.1.0</version>
+	</dependency>
+		
+	<!-- https://mvnrepository.com/artifact/org.mongodb/mongodb-driver-reactivestreams -->
+	<dependency>
+	    <groupId>org.mongodb</groupId>
+	    <artifactId>mongodb-driver-reactivestreams</artifactId>
+	    <version>4.1.0</version>
+	</dependency>
+		
+	<!-- https://mvnrepository.com/artifact/org.postgresql/postgresql -->
+	<dependency>
+	    <groupId>org.postgresql</groupId>
+	    <artifactId>postgresql</artifactId>
+	    <version>42.2.17</version>
+	</dependency>
+	
+	<!-- https://mvnrepository.com/artifact/javax.servlet.jsp/javax.servlet.jsp-api -->
+	<dependency>
+	    <groupId>javax.servlet.jsp</groupId>
+	    <artifactId>javax.servlet.jsp-api</artifactId>
+	    <version>2.3.3</version>
+	    <scope>provided</scope>
+	</dependency>
+		
+	<!-- https://mvnrepository.com/artifact/org.apache.tomcat/tomcat-jsp-api -->
+	<dependency>
+	    <groupId>org.apache.tomcat</groupId>
+	    <artifactId>tomcat-jsp-api</artifactId>
+	    <version>10.0.0-M9</version>
+	</dependency>
+		
+	<!-- https://mvnrepository.com/artifact/javax.servlet.jsp.jstl/jstl -->
+<!--	<dependency>
+	    <groupId>javax.servlet.jsp.jstl</groupId>
+	    <artifactId>jstl</artifactId>
+	    <version>1.2</version>
+	</dependency>
+ -->	
+	
+	<!-- https://mvnrepository.com/artifact/org.mockito/mockito-core -->
+	<dependency>
+	    <groupId>org.mockito</groupId>
+	    <artifactId>mockito-core</artifactId>
+	    <version>3.5.13</version>
+	    <scope>test</scope>
+	</dependency>
+		
+	<!-- https://mvnrepository.com/artifact/org.mockito/mockito-all -->
+	<dependency>
+	    <groupId>org.mockito</groupId>
+	    <artifactId>mockito-all</artifactId>
+	    <version>1.10.19</version>
+	    <scope>test</scope>
+	</dependency>
+	
+	<!-- https://mvnrepository.com/artifact/org.apache.pdfbox/pdfbox -->
+	<dependency>
+	    <groupId>org.apache.pdfbox</groupId>
+	    <artifactId>pdfbox</artifactId>
+	    <version>2.0.21</version>
+	</dependency>
+		
+	<!-- https://mvnrepository.com/artifact/commons-io/commons-io -->
+	<dependency>
+	    <groupId>commons-io</groupId>
+	    <artifactId>commons-io</artifactId>
+	    <version>2.8.0</version>
+	</dependency>
+		
+	<!-- https://mvnrepository.com/artifact/com.google.inject/guice -->
+	<dependency>
+	    <groupId>com.google.inject</groupId>
+	    <artifactId>guice</artifactId>
+	    <version>4.2.3</version>
+	</dependency>
+		
+	<!-- https://mvnrepository.com/artifact/org.jetbrains.kotlin/kotlin-stdlib -->
+	<dependency>
+	    <groupId>org.jetbrains.kotlin</groupId>
+	    <artifactId>kotlin-stdlib</artifactId>
+	    <version>1.4.10</version>
+	</dependency>
+	
+	<!-- https://mvnrepository.com/artifact/org.jetbrains.kotlin/kotlin-stdlib-jdk8 -->
+	<dependency>
+	    <groupId>org.jetbrains.kotlin</groupId>
+	    <artifactId>kotlin-stdlib-jdk8</artifactId>
+	    <version>1.4.10</version>
+	</dependency>
+		
+	<!-- https://mvnrepository.com/artifact/org.jetbrains.kotlin/kotlin-reflect -->
+	<dependency>
+	    <groupId>org.jetbrains.kotlin</groupId>
+	    <artifactId>kotlin-reflect</artifactId>
+	    <version>1.4.10</version>
+	    <scope>runtime</scope>
+	</dependency>
+		
+	<!-- https://mvnrepository.com/artifact/org.jetbrains.kotlin/kotlin-stdlib-common -->
+	<dependency>
+	    <groupId>org.jetbrains.kotlin</groupId>
+	    <artifactId>kotlin-stdlib-common</artifactId>
+	    <version>1.4.10</version>
+	</dependency>
+		
+	<!-- https://mvnrepository.com/artifact/org.jetbrains.kotlin/kotlin-test -->
+	<dependency>
+	    <groupId>org.jetbrains.kotlin</groupId>
+	    <artifactId>kotlin-test</artifactId>
+	    <version>1.4.10</version>
+	</dependency>
+		
+	<!-- https://mvnrepository.com/artifact/org.jetbrains.kotlin/kotlin-test-junit5 -->
+	<dependency>
+	    <groupId>org.jetbrains.kotlin</groupId>
+	    <artifactId>kotlin-test-junit5</artifactId>
+	    <version>1.4.10</version>
+	    <scope>test</scope>
+	</dependency>
+		
+	<!-- https://mvnrepository.com/artifact/org.jetbrains.kotlin/kotlin-stdlib-jre8 -->
+	<dependency>
+	    <groupId>org.jetbrains.kotlin</groupId>
+	    <artifactId>kotlin-stdlib-jre8</artifactId>
+	    <version>1.2.71</version>
+	</dependency>
+		
+	<!-- https://mvnrepository.com/artifact/org.jetbrains.kotlin/kotlin-stdlib-js -->
+	<dependency>
+	    <groupId>org.jetbrains.kotlin</groupId>
+	    <artifactId>kotlin-stdlib-js</artifactId>
+	    <version>1.4.10</version>
+	</dependency>
+		
+	<!-- https://mvnrepository.com/artifact/org.jetbrains.kotlin/kotlin-compiler-embeddable -->
+	<dependency>
+	    <groupId>org.jetbrains.kotlin</groupId>
+	    <artifactId>kotlin-compiler-embeddable</artifactId>
+	    <version>1.4.10</version>
+	    <scope>runtime</scope>
+	</dependency>
+	
+	<!-- https://mvnrepository.com/artifact/org.jetbrains.kotlin/kotlin-test-common -->
+	<dependency>
+	    <groupId>org.jetbrains.kotlin</groupId>
+	    <artifactId>kotlin-test-common</artifactId>
+	    <version>1.4.10</version>
+	</dependency>
+		
+	<!-- https://mvnrepository.com/artifact/org.jetbrains.kotlin/kotlin-compiler -->
+	<dependency>
+	    <groupId>org.jetbrains.kotlin</groupId>
+	    <artifactId>kotlin-compiler</artifactId>
+	    <version>1.4.10</version>
+	</dependency>
+		
+	<!-- https://mvnrepository.com/artifact/org.jetbrains.kotlin/kotlin-test-annotations-common -->
+	<dependency>
+	    <groupId>org.jetbrains.kotlin</groupId>
+	    <artifactId>kotlin-test-annotations-common</artifactId>
+	    <version>1.4.10</version>
+	</dependency>
+	
+	<!-- https://mvnrepository.com/artifact/org.jetbrains.kotlin/kotlin-test-js -->
+	<dependency>
+	    <groupId>org.jetbrains.kotlin</groupId>
+	    <artifactId>kotlin-test-js</artifactId>
+	    <version>1.4.10</version>
+	    <scope>test</scope>
+	</dependency>
+			
+	<!-- https://mvnrepository.com/artifact/org.jetbrains.kotlin/kotlin-script-util -->
+	<dependency>
+	    <groupId>org.jetbrains.kotlin</groupId>
+	    <artifactId>kotlin-script-util</artifactId>
+	    <version>1.4.10</version>
+	</dependency>
+	
+	<!-- https://mvnrepository.com/artifact/org.jetbrains.kotlin/kotlin-script-runtime -->
+	<dependency>
+	    <groupId>org.jetbrains.kotlin</groupId>
+	    <artifactId>kotlin-script-runtime</artifactId>
+	    <version>1.4.10</version>
+	</dependency>
+		
+	<!-- https://mvnrepository.com/artifact/org.apache.commons/commons-dbcp2 -->
+	<dependency>
+	    <groupId>org.apache.commons</groupId>
+	    <artifactId>commons-dbcp2</artifactId>
+	    <version>2.8.0</version>
+	</dependency>
+		
+	<!-- https://mvnrepository.com/artifact/com.zaxxer/HikariCP -->
+	<dependency>
+	    <groupId>com.zaxxer</groupId>
+	    <artifactId>HikariCP</artifactId>
+	    <version>3.4.5</version>
+	</dependency>
+		
+	<!-- https://mvnrepository.com/artifact/com.google.code.gson/gson -->
+	<dependency>
+	    <groupId>com.google.code.gson</groupId>
+	    <artifactId>gson</artifactId>
+	    <version>2.8.6</version>
+	</dependency>
+		
+	<!-- https://mvnrepository.com/artifact/com.googlecode.json-simple/json-simple -->
+	<dependency>
+	    <groupId>com.googlecode.json-simple</groupId>
+	    <artifactId>json-simple</artifactId>
+	    <version>1.1.1</version>
+	</dependency>
+		
+	<!-- https://mvnrepository.com/artifact/org.json/json -->
+	<dependency>
+	    <groupId>org.json</groupId>
+	    <artifactId>json</artifactId>
+	    <version>20200518</version>
+	</dependency>
+	
+	<!-- https://mvnrepository.com/artifact/org.scala-lang/scala-library -->
+	<dependency>
+	    <groupId>org.scala-lang</groupId>
+	    <artifactId>scala-library</artifactId>
+	    <version>2.13.3</version>
+	</dependency>
+		
+	<!-- https://mvnrepository.com/artifact/org.clojure/clojure -->
+	<dependency>
+	    <groupId>org.clojure</groupId>
+	    <artifactId>clojure</artifactId>
+	    <version>1.10.1</version>
+	</dependency>
+		
+	<!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-api -->
+	<dependency>
+	    <groupId>org.slf4j</groupId>
+	    <artifactId>slf4j-api</artifactId>
+	    <version>1.7.30</version>
+	</dependency>
+		
+	<!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-log4j12 -->
+	<dependency>
+	    <groupId>org.slf4j</groupId>
+	    <artifactId>slf4j-log4j12</artifactId>
+	    <version>1.7.30</version>
+	    <scope>test</scope>
+	</dependency>
+		
+	<!-- https://mvnrepository.com/artifact/javax.mail/javax.mail-api -->
+	<dependency>
+	    <groupId>javax.mail</groupId>
+	    <artifactId>javax.mail-api</artifactId>
+	    <version>1.6.2</version>
+	</dependency>
+		
+	<!-- https://mvnrepository.com/artifact/org.apache.commons/commons-email -->
+	<dependency>
+	    <groupId>org.apache.commons</groupId>
+	    <artifactId>commons-email</artifactId>
+	    <version>1.5</version>
+	</dependency>
+		
+	<!-- https://mvnrepository.com/artifact/org.apache.commons/commons-collections4 -->
+	<dependency>
+	    <groupId>org.apache.commons</groupId>
+	    <artifactId>commons-collections4</artifactId>
+	    <version>4.4</version>
+	</dependency>
+		
+	<!-- https://mvnrepository.com/artifact/org.apache.commons/commons-lang3 -->
+	<dependency>
+	    <groupId>org.apache.commons</groupId>
+	    <artifactId>commons-lang3</artifactId>
+	    <version>3.11</version>
+	</dependency>
+	
+	<!-- https://mvnrepository.com/artifact/com.google.guava/guava -->
+	<dependency>
+	    <groupId>com.google.guava</groupId>
+	    <artifactId>guava</artifactId>
+	    <version>29.0-jre</version>
+	</dependency>
+			
+	<!-- https://mvnrepository.com/artifact/commons-cli/commons-cli -->
+	<dependency>
+	    <groupId>commons-cli</groupId>
+	    <artifactId>commons-cli</artifactId>
+	    <version>1.4</version>
+	</dependency>
+		
+	<!-- https://mvnrepository.com/artifact/org.apache.httpcomponents/httpclient -->
+	<dependency>
+	    <groupId>org.apache.httpcomponents</groupId>
+	    <artifactId>httpclient</artifactId>
+	    <version>4.5.13</version>
+	</dependency>
+		
+	<!-- https://mvnrepository.com/artifact/org.apache.httpcomponents/httpcore -->
+	<dependency>
+	    <groupId>org.apache.httpcomponents</groupId>
+	    <artifactId>httpcore</artifactId>
+	    <version>4.4.13</version>
+	</dependency>	
+	
+	<!-- https://mvnrepository.com/artifact/org.apache.httpcomponents/httpmime -->
+	<dependency>
+	    <groupId>org.apache.httpcomponents</groupId>
+	    <artifactId>httpmime</artifactId>
+	    <version>4.5.13</version>
+	</dependency>
+		
+	<!-- https://mvnrepository.com/artifact/org.apache.httpcomponents/httpasyncclient -->
+	<dependency>
+	    <groupId>org.apache.httpcomponents</groupId>
+	    <artifactId>httpasyncclient</artifactId>
+	    <version>4.1.4</version>
+	</dependency>
+		
+	<!-- https://mvnrepository.com/artifact/org.apache.httpcomponents/httpclient-cache -->
+	<dependency>
+	    <groupId>org.apache.httpcomponents</groupId>
+	    <artifactId>httpclient-cache</artifactId>
+	    <version>4.5.13</version>
+	</dependency>
+		
+	<!-- https://mvnrepository.com/artifact/org.apache.httpcomponents/fluent-hc -->
+	<dependency>
+	    <groupId>org.apache.httpcomponents</groupId>
+	    <artifactId>fluent-hc</artifactId>
+	    <version>4.5.13</version>
+	</dependency>
+		
+	<!-- https://mvnrepository.com/artifact/com.h2database/h2 -->
+	<dependency>
+	    <groupId>com.h2database</groupId>
+	    <artifactId>h2</artifactId>
+	    <version>1.4.200</version>
+	    <scope>test</scope>
+	</dependency>
+		
+	<!-- https://mvnrepository.com/artifact/joda-time/joda-time -->
+	<dependency>
+	    <groupId>joda-time</groupId>
+	    <artifactId>joda-time</artifactId>
+	    <version>2.10.6</version>
+	</dependency>
+		
+	<!-- https://mvnrepository.com/artifact/com.typesafe.akka/akka-http -->
+	<dependency>
+	    <groupId>com.typesafe.akka</groupId>
+	    <artifactId>akka-http_2.13</artifactId>
+	    <version>10.2.1</version>
+	</dependency>
+		
+	<!-- https://mvnrepository.com/artifact/com.typesafe.akka/akka-stream-testkit -->
+	<dependency>
+	    <groupId>com.typesafe.akka</groupId>
+	    <artifactId>akka-stream-testkit_2.13</artifactId>
+	    <version>2.6.10</version>
+	    <scope>test</scope>
+	</dependency>
+		
+	<!-- https://mvnrepository.com/artifact/com.typesafe.akka/akka-http-testkit -->
+	<dependency>
+	    <groupId>com.typesafe.akka</groupId>
+	    <artifactId>akka-http-testkit_2.13</artifactId>
+	    <version>10.2.1</version>
+	    <scope>test</scope>
+	</dependency>
+		
+	<!-- https://mvnrepository.com/artifact/com.typesafe.akka/akka-cluster -->
+	<dependency>
+	    <groupId>com.typesafe.akka</groupId>
+	    <artifactId>akka-cluster_2.13</artifactId>
+	    <version>2.6.10</version>
+	</dependency>
+		
+	<!-- https://mvnrepository.com/artifact/com.typesafe.akka/akka-remote -->
+	<dependency>
+	    <groupId>com.typesafe.akka</groupId>
+	    <artifactId>akka-remote_2.13</artifactId>
+	    <version>2.6.10</version>
+	</dependency>
+		
+	<!-- https://mvnrepository.com/artifact/com.typesafe.akka/akka-http-core -->
+	<dependency>
+	    <groupId>com.typesafe.akka</groupId>
+	    <artifactId>akka-http-core_2.13</artifactId>
+	    <version>10.2.1</version>
+	</dependency>
+	
+	<!-- https://mvnrepository.com/artifact/com.typesafe.akka/akka-persistence -->
+	<dependency>
+	    <groupId>com.typesafe.akka</groupId>
+	    <artifactId>akka-persistence_2.13</artifactId>
+	    <version>2.6.10</version>
+	</dependency>
+	
+	<!-- https://mvnrepository.com/artifact/com.typesafe.akka/akka-http-spray-json -->
+	<dependency>
+	    <groupId>com.typesafe.akka</groupId>
+	    <artifactId>akka-http-spray-json_2.13</artifactId>
+	    <version>10.2.1</version>
+	</dependency>
+			
+	<!-- https://mvnrepository.com/artifact/com.typesafe.akka/akka-cluster-tools -->
+	<dependency>
+	    <groupId>com.typesafe.akka</groupId>
+	    <artifactId>akka-cluster-tools_2.13</artifactId>
+	    <version>2.6.10</version>
+	</dependency>
+		
+	<!-- https://mvnrepository.com/artifact/com.typesafe.akka/akka-contrib -->
+	<dependency>
+	    <groupId>com.typesafe.akka</groupId>
+	    <artifactId>akka-contrib_2.13</artifactId>
+	    <version>2.5.31</version>
+	</dependency>
+		
+	<!-- https://mvnrepository.com/artifact/com.typesafe.akka/akka-cluster-sharding -->
+	<dependency>
+	    <groupId>com.typesafe.akka</groupId>
+	    <artifactId>akka-cluster-sharding_2.13</artifactId>
+	    <version>2.6.10</version>
+	</dependency>
+		
+	<!-- https://mvnrepository.com/artifact/com.typesafe.akka/akka-persistence-query -->
+	<dependency>
+	    <groupId>com.typesafe.akka</groupId>
+	    <artifactId>akka-persistence-query_2.13</artifactId>
+	    <version>2.6.10</version>
+	</dependency>
+		
+  	<!-- https://mvnrepository.com/artifact/com.typesafe.akka/akka-testkit -->
+	<dependency>
+	    <groupId>com.typesafe.akka</groupId>
+	    <artifactId>akka-testkit_2.13</artifactId>
+	    <version>2.6.10</version>
+	    <scope>test</scope>
+	</dependency>
+	  	
+	<!-- https://mvnrepository.com/artifact/com.typesafe.akka/akka-stream -->
+	<dependency>
+	    <groupId>com.typesafe.akka</groupId>
+	    <artifactId>akka-stream_2.13</artifactId>
+	    <version>2.6.10</version>
+	</dependency>
+		
+	<!-- https://mvnrepository.com/artifact/com.typesafe.akka/akka-slf4j -->
+	<dependency>
+	    <groupId>com.typesafe.akka</groupId>
+	    <artifactId>akka-slf4j_2.13</artifactId>
+	    <version>2.6.10</version>
+	</dependency>
+		
+	<!-- https://mvnrepository.com/artifact/com.typesafe.akka/akka-actor -->
+	<dependency>
+	    <groupId>com.typesafe.akka</groupId>
+	    <artifactId>akka-actor_2.13</artifactId>
+	    <version>2.6.10</version>
+	</dependency>
+		
+	<!-- https://mvnrepository.com/artifact/org.apache.spark/spark-core -->
+	<dependency>
+	    <groupId>org.apache.spark</groupId>
+	    <artifactId>spark-core_2.12</artifactId>
+	    <version>3.0.1</version>
+	</dependency>
+		
+	<!-- https://mvnrepository.com/artifact/org.apache.spark/spark-sql -->
+	<dependency>
+	    <groupId>org.apache.spark</groupId>
+	    <artifactId>spark-sql_2.12</artifactId>
+	    <version>3.0.1</version>
+	</dependency>
+		
+	<!-- https://mvnrepository.com/artifact/org.apache.spark/spark-mllib -->
+	<dependency>
+	    <groupId>org.apache.spark</groupId>
+	    <artifactId>spark-mllib_2.12</artifactId>
+	    <version>3.0.1</version>
+	    <scope>runtime</scope>
+	</dependency>
+		
+	<!-- https://mvnrepository.com/artifact/org.apache.spark/spark-streaming -->
+	<dependency>
+	    <groupId>org.apache.spark</groupId>
+	    <artifactId>spark-streaming_2.12</artifactId>
+	    <version>3.0.1</version>
+	    <scope>provided</scope>
+	</dependency>
+	
+	<!-- https://mvnrepository.com/artifact/org.apache.spark/spark-graphx -->
+	<dependency>
+	    <groupId>org.apache.spark</groupId>
+	    <artifactId>spark-graphx_2.12</artifactId>
+	    <version>3.0.1</version>
+	</dependency>
+	
+	<!-- https://mvnrepository.com/artifact/org.apache.spark/spark-catalyst -->
+	<dependency>
+	    <groupId>org.apache.spark</groupId>
+	    <artifactId>spark-catalyst_2.12</artifactId>
+	    <version>3.0.1</version>
+	    <scope>test</scope>
+	</dependency>
+	
+	<!-- https://mvnrepository.com/artifact/org.apache.spark/spark-tags -->
+	<dependency>
+	    <groupId>org.apache.spark</groupId>
+	    <artifactId>spark-tags_2.12</artifactId>
+	    <version>3.0.1</version>
+	</dependency>
+	
+	<!-- https://mvnrepository.com/artifact/org.apache.spark/spark-sql-kafka-0-10 -->
+	<dependency>
+	    <groupId>org.apache.spark</groupId>
+	    <artifactId>spark-sql-kafka-0-10_2.12</artifactId>
+	    <version>3.0.1</version>
+	    <scope>provided</scope>
+	</dependency>
+	
+	<!-- https://mvnrepository.com/artifact/org.apache.spark/spark-repl -->
+	<dependency>
+	    <groupId>org.apache.spark</groupId>
+	    <artifactId>spark-repl_2.12</artifactId>
+	    <version>3.0.1</version>
+	    <scope>provided</scope>
+	</dependency>
+	
+	<!-- https://mvnrepository.com/artifact/org.apache.spark/spark-streaming-kafka-0-10 -->
+	<dependency>
+	    <groupId>org.apache.spark</groupId>
+	    <artifactId>spark-streaming-kafka-0-10_2.12</artifactId>
+	    <version>3.0.1</version>
+	</dependency>
+		
+	<!-- https://mvnrepository.com/artifact/org.apache.spark/spark-unsafe -->
+	<dependency>
+	    <groupId>org.apache.spark</groupId>
+	    <artifactId>spark-unsafe_2.12</artifactId>
+	    <version>3.0.1</version>
+	</dependency>
+	
+	<!-- https://mvnrepository.com/artifact/org.apache.spark/spark-network-common -->
+	<dependency>
+	    <groupId>org.apache.spark</groupId>
+	    <artifactId>spark-network-common_2.12</artifactId>
+	    <version>3.0.1</version>
+	</dependency>
+	
+	<!-- https://mvnrepository.com/artifact/org.apache.spark/spark-mllib-local -->
+	<dependency>
+	    <groupId>org.apache.spark</groupId>
+	    <artifactId>spark-mllib-local_2.12</artifactId>
+	    <version>3.0.1</version>
+	</dependency>
+	
+	<!-- https://mvnrepository.com/artifact/org.apache.spark/spark-launcher -->
+	<dependency>
+	    <groupId>org.apache.spark</groupId>
+	    <artifactId>spark-launcher_2.12</artifactId>
+	    <version>3.0.1</version>
+	</dependency>
+		
+	<!-- https://mvnrepository.com/artifact/org.apache.spark/spark-async-shuffle-upload-immutables -->
+<!-- <dependency>
+	    <groupId>org.apache.spark</groupId>
+	    <artifactId>spark-async-shuffle-upload-immutables_2.12</artifactId>
+	    <version>3.0.0-palantir.82</version>
+	    <scope>provided</scope>
+	</dependency>
+-->
+	
+	<!-- https://mvnrepository.com/artifact/org.apache.spark/spark-async-shuffle-upload-api -->
+<!-- 	<dependency>
+	    <groupId>org.apache.spark</groupId>
+	    <artifactId>spark-async-shuffle-upload-api_2.12</artifactId>
+	    <version>3.0.0-palantir.82</version>
+	</dependency>
+-->
+		
+	<!-- https://mvnrepository.com/artifact/org.apache.spark/spark-kubernetes -->
+	<dependency>
+	    <groupId>org.apache.spark</groupId>
+	    <artifactId>spark-kubernetes_2.12</artifactId>
+	    <version>3.0.1</version>
+	</dependency>
+		
+	<!-- https://mvnrepository.com/artifact/org.apache.spark/spark-async-shuffle-upload-scala -->
+<!--	<dependency>
+	    <groupId>org.apache.spark</groupId>
+	    <artifactId>spark-async-shuffle-upload-scala_2.12</artifactId>
+	    <version>3.0.0-palantir.82</version>
+	</dependency>
+-->
+		
+	<!-- https://mvnrepository.com/artifact/org.apache.spark/spark-kvstore -->
+	<dependency>
+	    <groupId>org.apache.spark</groupId>
+	    <artifactId>spark-kvstore_2.12</artifactId>
+	    <version>3.0.1</version>
+	</dependency>
+	
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.11</version>
+      <scope>test</scope>
+    </dependency>
+    
+    <!-- https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-api -->
+	<dependency>
+	    <groupId>org.junit.jupiter</groupId>
+	    <artifactId>junit-jupiter-api</artifactId>
+	    <version>5.7.0</version>
+	    <scope>test</scope>
+	</dependency>	    
+  </dependencies>
+
+  <build>
+    <finalName>HelloWorldWithMessage</finalName>
+    <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
+      <plugins>
+        <plugin>
+          <artifactId>maven-clean-plugin</artifactId>
+          <version>3.1.0</version>
+        </plugin>
+        <!-- see http://maven.apache.org/ref/current/maven-core/default-bindings.html#Plugin_bindings_for_war_packaging -->
+        <plugin>
+          <artifactId>maven-resources-plugin</artifactId>
+          <version>3.0.2</version>
+        </plugin>
+        <plugin>
+          <artifactId>maven-compiler-plugin</artifactId>
+          <version>3.8.0</version>
+        </plugin>
+        <plugin>
+          <artifactId>maven-surefire-plugin</artifactId>
+          <version>2.22.1</version>
+        </plugin>
+        <plugin>
+          <artifactId>maven-war-plugin</artifactId>
+          <version>3.2.2</version>
+        </plugin>
+        <plugin>
+          <artifactId>maven-install-plugin</artifactId>
+          <version>2.5.2</version>
+        </plugin>
+        <plugin>
+          <artifactId>maven-deploy-plugin</artifactId>
+          <version>2.8.2</version>
+        </plugin>
+      </plugins>
+    </pluginManagement>
+  </build>
+</project>
