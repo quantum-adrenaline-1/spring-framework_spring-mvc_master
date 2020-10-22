@@ -8,6 +8,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
@@ -37,9 +38,17 @@ public class HomeController {
 		return "home";
 	}
 	
+	
 	@RequestMapping(value="index", method = RequestMethod.GET)
 	public String getIndexPage() {
 		return "index";
 	}
 	
+	
+	// The request method by default is 'GET', so it can also be skipped
+	@RequestMapping("welcome")
+	public String sayHelloInWelcomePage(ModelMap model) {
+		model.addAttribute("greeting", "Hello world from Spring MVC 5<br>Now I know the changes are reloaded!!");
+		return "welcome";
+	}
 }
