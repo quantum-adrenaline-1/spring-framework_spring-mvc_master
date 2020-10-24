@@ -1,5 +1,6 @@
+This application is implemented using XML configuration!
 
-	This is a basic Spring MVC application to --
+*	This is a basic Spring MVC application to --
 	
 		1. display "hello world" message on JSP page
 		
@@ -10,3 +11,4 @@
 		4. different possible ways of navigating between two JSPs using HTML Anchor tag hyperlinks by Http Request Forwarding
 		
 		5. Configure the project using XML
+
