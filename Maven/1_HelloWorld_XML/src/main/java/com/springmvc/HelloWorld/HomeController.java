@@ -1,4 +1,4 @@
-package com.springmvc.First_HelloWorld;
+package com.springmvc.HelloWorld;
 
 import java.text.DateFormat;
 import java.util.Date;
